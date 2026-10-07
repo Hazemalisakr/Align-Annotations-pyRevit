@@ -1,0 +1,83 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sakr Tools - Align Annotations"
+        Width="360" Height="450" SizeToContent="Height"
+        WindowStartupLocation="CenterScreen"
+        Background="#F5F0E8"
+        ResizeMode="NoResize"
+        ShowInTaskbar="True">
+
+    <DockPanel>
+        <!-- Branded Header -->
+        <Border DockPanel.Dock="Top" Background="#4C2335" Padding="16,12">
+            <StackPanel>
+                <TextBlock Text="ALIGN ANNOTATIONS"
+                           Foreground="#F5F0E8" FontSize="15"
+                           FontWeight="Bold" FontFamily="Segoe UI"/>
+                <TextBlock Text="Sakr Tools"
+                           Foreground="#E07856" FontSize="11"
+                           FontFamily="Segoe UI" Margin="0,2,0,0"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Content -->
+        <StackPanel Margin="20,16,20,16">
+
+            <TextBlock Text="ALIGNMENT DIRECTION" FontSize="11" FontWeight="Bold"
+                       Foreground="#4C2335" FontFamily="Segoe UI"
+                       Margin="0,0,0,10"/>
+            <RadioButton x:Name="rb_horizontal"
+                         Content="Align Horizontally (Same Y)"
+                         IsChecked="True" GroupName="Direction"
+                         Foreground="#3B332E" FontSize="13"
+                         FontFamily="Segoe UI" Margin="0,4"/>
+            <RadioButton x:Name="rb_vertical"
+                         Content="Align Vertically (Same X)"
+                         GroupName="Direction"
+                         Foreground="#3B332E" FontSize="13"
+                         FontFamily="Segoe UI" Margin="0,4"/>
+
+            <!-- Terracotta Separator -->
+            <Border Height="2" Background="#E07856"
+                    Margin="0,12,0,12" CornerRadius="1"/>
+
+            <!-- Alignment Reference -->
+            <TextBlock Text="ALIGN TO" FontSize="11" FontWeight="Bold"
+                       Foreground="#4C2335" FontFamily="Segoe UI"
+                       Margin="0,0,0,10"/>
+            <RadioButton x:Name="rb_average"
+                         Content="Average of All Selected"
+                         GroupName="Reference"
+                         Foreground="#3B332E" FontSize="13"
+                         FontFamily="Segoe UI" Margin="0,4"/>
+            <RadioButton x:Name="rb_auto"
+                         Content="Left-most / Top-most Element"
+                         GroupName="Reference"
+                         Foreground="#3B332E" FontSize="13"
+                         FontFamily="Segoe UI" Margin="0,4"/>
+            <RadioButton x:Name="rb_pick"
+                         Content="Pick Reference on Screen"
+                         IsChecked="True" GroupName="Reference"
+                         Foreground="#3B332E" FontSize="13"
+                         FontFamily="Segoe UI" Margin="0,4"/>
+
+            <!-- Buttons -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"
+                        Margin="0,24,0,0">
+                <Button x:Name="btn_cancel" Content="Cancel"
+                        Background="White" Foreground="#3B332E"
+                        FontSize="13" FontFamily="Segoe UI"
+                        Padding="20,8" Margin="0,0,8,0"
+                        BorderBrush="#4C2335" BorderThickness="1.5"
+                        Cursor="Hand"/>
+                <Button x:Name="btn_ok" Content="Align"
+                        Background="#4C2335" Foreground="#F5F0E8"
+                        FontSize="13" FontWeight="SemiBold"
+                        FontFamily="Segoe UI"
+                        Padding="20,8"
+                        BorderThickness="0" Cursor="Hand"/>
+            </StackPanel>
+        </StackPanel>
+    </DockPanel>
+</Window>
+
