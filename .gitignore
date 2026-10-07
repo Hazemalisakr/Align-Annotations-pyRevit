@@ -1,0 +1,10 @@
+# pyRevit ignores
+__pycache__/
+*.pyc
+*.pyo
+
+# Mac OS ignores
+.DS_Store
+
+# User-specific pyRevit config files (if any)
+*config.ini

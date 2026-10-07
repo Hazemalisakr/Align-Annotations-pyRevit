@@ -1,0 +1,8 @@
+{
+  "name": "Align Annotations",
+  "description": "Geometrically align tags and text notes without breaking Revit room boundary rules.",
+  "author": "Hazem Sakr",
+  "author_profile": "https://github.com/Hazemalisakr",
+  "url": "https://github.com/Hazemalisakr/Align-Annotations-pyRevit",
+  "version": "1.0.0"
+}
